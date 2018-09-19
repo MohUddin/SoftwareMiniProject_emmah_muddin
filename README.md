@@ -11,9 +11,9 @@ The app features include user authentication through a Google sign-in, individua
 
 ## Installing
 
-'''
+```
 some code maybe
-'''
+```
 ## Running the App 
 
 pictures of UI or graph? examples
