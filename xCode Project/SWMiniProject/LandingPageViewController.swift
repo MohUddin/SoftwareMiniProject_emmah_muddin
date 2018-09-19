@@ -135,9 +135,9 @@ class LandingPageViewController: UIViewController{
     func setupGreetingLbl(){
         
         greetingLbl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        greetingLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: -30).isActive = true
+        greetingLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 100).isActive = true
         greetingLbl.widthAnchor.constraint(equalToConstant: 300).isActive = true
-        greetingLbl.heightAnchor.constraint(equalToConstant:300).isActive = true
+        greetingLbl.heightAnchor.constraint(equalToConstant:100).isActive = true
     }
     
     func setupTemptitle(){
@@ -186,8 +186,7 @@ class LandingPageViewController: UIViewController{
         self.navigationController?.popViewController(animated: true)
     }
     
-    
-  
+
 
 }
 

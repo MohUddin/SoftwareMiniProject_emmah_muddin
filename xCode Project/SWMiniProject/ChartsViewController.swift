@@ -13,6 +13,7 @@ import Firebase
 import SwiftKeychainWrapper
 
 class ChartsViewController: UIViewController {
+    //Array of houses
     
     @IBOutlet weak var lineChart: LineChartView!
     
@@ -23,21 +24,25 @@ class ChartsViewController: UIViewController {
         view.backgroundColor = UIColor.white
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleBack))
         
+       chartQuery()
+        
+        
     }
+    
+    
     
     @objc func handleBack(){
         self.navigationController?.popViewController(animated: true)
     }
     
     func chartQuery(){
-        //Array of house objects
         var homeArray = [House]()
         
         //Get securely stored user information
         let userId = KeychainWrapper.standard.string(forKey: "userId")
         let houseId = KeychainWrapper.standard.string(forKey: "houseId")
         
-        var newHouse = House()
+        
         
         //Query using stored values
         let homeRef = Firestore.firestore().collection("Users").document(userId!).collection(houseId!)
@@ -46,17 +51,18 @@ class ChartsViewController: UIViewController {
         homeRef.order(by: "time").limit(to: 5)
         .getDocuments{ (collSnapshot, error) in
             
-            guard let collSnapshot = collSnapshot, collSnapshot.isEmpty else{
+            guard let collSnapshot = collSnapshot, !collSnapshot.isEmpty else{
                 return
             }
             
+            print("SUCCESSFULLY GOT DOC SNAPSHOT")
             let querySnapArray = collSnapshot.documents
             
             //Putting data into array of houses
             for docs in querySnapArray{
-                let newData = docs.data()
+                var newData = docs.data()
                 
-                
+                var newHouse = House()
                 newHouse.houseId = houseId
                 newHouse.humidity = newData["humidity"] as? Int
                 newHouse.temperature = newData["temperature"] as? Int
@@ -64,9 +70,46 @@ class ChartsViewController: UIViewController {
                 homeArray.append(newHouse)
             }
             
+            self.updateGraph(arr: homeArray)
             
             
+    
+           
         }
+        
+        
+       
+        
+        
+    }
+    
+    func updateGraph(arr: [House]){
+        
+        var tempLineGraphEntry = [ChartDataEntry]()
+        var humLineGraphEntry = [ChartDataEntry]()
+        
+        for i in 0..<arr.count {
+            let temp = ChartDataEntry(x: Double(i), y: (Double(arr[i].temperature!)))
+            
+            let hum = ChartDataEntry(x: Double(i), y: (Double(arr[i].humidity!)))
+    
+            
+            print("TEMP: \(arr[i].temperature)")
+            tempLineGraphEntry.append(temp)
+            humLineGraphEntry.append(hum)
+        }
+        
+        let line1 = LineChartDataSet(values: tempLineGraphEntry, label: "Temperatures")
+        let line2 = LineChartDataSet(values: humLineGraphEntry, label: "Humidity")
+        
+        line1.colors = [NSUIColor.blue]
+        line2.colors = [NSUIColor.red]
+        
+        let data = LineChartData()
+        data.addDataSet(line1)
+        data.addDataSet(line2)
+        
+        lineChart.data = data
         
     }
     
