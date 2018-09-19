@@ -44,6 +44,14 @@ class ChartsViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        chartQuery()
+    }
+    
+    
+    
     
     
     @objc func handleBack(){
@@ -114,7 +122,7 @@ class ChartsViewController: UIViewController {
             humLineGraphEntry.append(hum)
         }
         
-        let line1 = LineChartDataSet(values: tempLineGraphEntry, label: "Temperatures")
+        let line1 = LineChartDataSet(values: tempLineGraphEntry, label: "Temperature")
         let line2 = LineChartDataSet(values: humLineGraphEntry, label: "Humidity")
         
         line1.colors = [NSUIColor.blue]
