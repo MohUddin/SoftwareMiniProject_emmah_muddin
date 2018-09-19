@@ -17,12 +17,27 @@ class ChartsViewController: UIViewController {
     
     @IBOutlet weak var lineChart: LineChartView!
     
+    let titleLbl:UILabel = {
+        let lbl = UILabel()
+        lbl.textColor = UIColor(r: 132, g: 193, b: 77)
+        lbl.text = "Temperature & Humidity Over the Last 5 Hours"
+        lbl.font = UIFont(name: "AvenirNext-DemiBold", size: 15)
+        lbl.textAlignment = .center
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
         view.backgroundColor = UIColor.white
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Back", style: .plain, target: self, action: #selector(handleBack))
+        
+        view.addSubview(titleLbl)
+        
+        setupTitleLbl()
+        setupChart()
         
        chartQuery()
         
@@ -112,5 +127,17 @@ class ChartsViewController: UIViewController {
         lineChart.data = data
         
     }
+    
+    func setupTitleLbl(){
+        titleLbl.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        titleLbl.topAnchor.constraint(equalTo: view.topAnchor, constant: 30).isActive = true
+        titleLbl.widthAnchor.constraint(equalToConstant: 400).isActive = true
+        titleLbl.heightAnchor.constraint(equalToConstant:100).isActive = true
+    }
+    
+    func setupChart(){
+        lineChart.topAnchor.constraint(equalTo: titleLbl.bottomAnchor, constant: 10).isActive = true
+    }
+    
     
 }
