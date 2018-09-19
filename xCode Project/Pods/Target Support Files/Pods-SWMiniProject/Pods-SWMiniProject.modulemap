@@ -1,0 +1,6 @@
+module Pods_SWMiniProject {
+  umbrella header "Pods-SWMiniProject-umbrella.h"
+
+  export *
+  module * { export * }
+}
