@@ -36,7 +36,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         GIDSignIn.sharedInstance().uiDelegate = self
         UserDefaults.standard.set("", forKey: "fullName")
         //Try to automatically sign in user
-        //GIDSignIn.sharedInstance().signInSilently()
+        GIDSignIn.sharedInstance().signOut()
         
         NotificationCenter.default.addObserver(self, selector: #selector(successfulSignIn), name: NSNotification.Name("SuccessfulSignIn"), object: nil)
     }
