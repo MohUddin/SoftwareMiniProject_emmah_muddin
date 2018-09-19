@@ -133,7 +133,7 @@ class ChartsViewController: UIViewController {
         data.addDataSet(line2)
         
         lineChart.data = data
-        
+        lineChart.chartDescription?.text = ""
     }
     
     func setupTitleLbl(){
