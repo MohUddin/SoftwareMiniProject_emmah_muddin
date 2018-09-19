@@ -4,5 +4,8 @@
 target 'SWMiniProject' do
   pod 'GoogleSignIn'
   pod 'Firebase/Core'
+  pod 'Charts'
+  pod 'SwiftKeychainWrapper'
+  pod 'Firebase/Firestore'
 
 end

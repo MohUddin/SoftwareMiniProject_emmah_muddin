@@ -8,21 +8,21 @@
 
 import UIKit
 import GoogleSignIn
-
+import Firebase
+import Charts
+import SwiftKeychainWrapper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
 
     var window: UIWindow?
     
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
-        /*window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
-        window?.rootViewController = UINavigationController(rootViewController: ViewController())*/
-
+        FirebaseApp.configure()
+        let db = Firestore.firestore()
         
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "165481376366-qagq0cl3i13bf7287pn7k7g1h5r5ql3g.apps.googleusercontent.com"
@@ -74,7 +74,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate{
             // ...
             print(fullName)
             UserDefaults.standard.set(fullName, forKey: "fullName")
-            
+            KeychainWrapper.standard.set(userId!, forKey: "userId")
+            print(" USER ID: \(userId)")
             NotificationCenter.default.post(
                 name: Notification.Name("SuccessfulSignIn"), object: nil, userInfo: nil)
         }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D5694D1215294E60064DF37 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5694D0215294E60064DF37 /* House.swift */; };
+		2D5694D3215294F50064DF37 /* ChartsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5694D2215294F50064DF37 /* ChartsViewController.swift */; };
+		2D5694D5215295000064DF37 /* Charts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D5694D4215295000064DF37 /* Charts.storyboard */; };
+		2D5694D72152952B0064DF37 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2D5694D62152952B0064DF37 /* GoogleService-Info.plist */; };
 		2DAE4C3F2148581900EAF465 /* LandingScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DAE4C3E2148581900EAF465 /* LandingScreen.storyboard */; };
 		2DB4E4B82142E71100790F8C /* LandingPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB4E4B72142E71100790F8C /* LandingPageViewController.swift */; };
 		2DBE642B2142D45D008F5CF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBE642A2142D45D008F5CF0 /* AppDelegate.swift */; };
@@ -38,6 +42,10 @@
 
 /* Begin PBXFileReference section */
 		12A055A7C49E634CE71DB07F /* Pods-SWMiniProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SWMiniProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SWMiniProject/Pods-SWMiniProject.debug.xcconfig"; sourceTree = "<group>"; };
+		2D5694D0215294E60064DF37 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
+		2D5694D2215294F50064DF37 /* ChartsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsViewController.swift; sourceTree = "<group>"; };
+		2D5694D4215295000064DF37 /* Charts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Charts.storyboard; sourceTree = "<group>"; };
+		2D5694D62152952B0064DF37 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DAE4C3E2148581900EAF465 /* LandingScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LandingScreen.storyboard; sourceTree = "<group>"; };
 		2DB4E4B72142E71100790F8C /* LandingPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingPageViewController.swift; sourceTree = "<group>"; };
 		2DBE64272142D45D008F5CF0 /* SWMiniProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SWMiniProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,12 +118,16 @@
 			children = (
 				2DBE642A2142D45D008F5CF0 /* AppDelegate.swift */,
 				2DB4E4B72142E71100790F8C /* LandingPageViewController.swift */,
+				2D5694D0215294E60064DF37 /* House.swift */,
+				2D5694D2215294F50064DF37 /* ChartsViewController.swift */,
+				2D5694D4215295000064DF37 /* Charts.storyboard */,
 				2DBE642C2142D45D008F5CF0 /* ViewController.swift */,
 				2DBE642E2142D45D008F5CF0 /* Main.storyboard */,
 				2DAE4C3E2148581900EAF465 /* LandingScreen.storyboard */,
 				2DBE64312142D45F008F5CF0 /* Assets.xcassets */,
 				2DBE64332142D45F008F5CF0 /* LaunchScreen.storyboard */,
 				2DBE64362142D45F008F5CF0 /* Info.plist */,
+				2D5694D62152952B0064DF37 /* GoogleService-Info.plist */,
 			);
 			path = SWMiniProject;
 			sourceTree = "<group>";
@@ -262,9 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DAE4C3F2148581900EAF465 /* LandingScreen.storyboard in Resources */,
+				2D5694D5215295000064DF37 /* Charts.storyboard in Resources */,
 				2DBE64352142D45F008F5CF0 /* LaunchScreen.storyboard in Resources */,
 				2DBE64322142D45F008F5CF0 /* Assets.xcassets in Resources */,
 				2DBE64302142D45D008F5CF0 /* Main.storyboard in Resources */,
+				2D5694D72152952B0064DF37 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +308,13 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-SWMiniProject/Pods-SWMiniProject-resources.sh",
 				"${PODS_ROOT}/GTMOAuth2/Source/Touch/GTMOAuth2ViewTouch.xib",
 				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/gRPC/gRPCCertificates.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GTMOAuth2ViewTouch.nib",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -331,7 +347,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBE642D2142D45D008F5CF0 /* ViewController.swift in Sources */,
+				2D5694D3215294F50064DF37 /* ChartsViewController.swift in Sources */,
 				2DB4E4B82142E71100790F8C /* LandingPageViewController.swift in Sources */,
+				2D5694D1215294E60064DF37 /* House.swift in Sources */,
 				2DBE642B2142D45D008F5CF0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
