@@ -17,7 +17,7 @@ This application can also be exported as an ipa file and deployed to the App Sto
 
 ## Running the App 
 
-See Screenshots folder for pictures of the application in practice
+See "Screenshots" folder for pictures of the application in practice
 
 ## Built With
 
