@@ -78,7 +78,7 @@ Another test we intended to carry out is the verification that multiple users ca
 
 ## Authors
 
-* **Emma Howard** - *Front End UI + Integration* [profile](https://www.linkedin.com/in/emmabh/)
+* **Emma Howard** - *Front End UI + Integration (with Firebase & Google Sign-In)* [profile](https://www.linkedin.com/in/emmabh/)
 * **Mohammed Uddin** - *Backend Database* [profile](https://www.linkedin.com/in/mouddin/)
 
 ## Licensing
@@ -88,5 +88,10 @@ Licensing procedures through *Apple iOS* and *Google Firestore*
 ## Acknowledgements
 
 Shout outs to Osama Alshayk and Alan Pisano for being totally tubular. 
+
+References for frameworks used:
+https://firebase.google.com/docs/ios/setup
+https://github.com/danielgindi/Charts
+https://developers.google.com/identity/sign-in/ios/start-integrating
 
 
