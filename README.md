@@ -3,12 +3,14 @@ Senior Design software miniproject. Practice working in a Agile development envi
 
 ## Home Climate - Getting Started
 
-Home Climate is inspired by EC 463 (senior design course at Boston University) to practice working within a small team setting to develop an application that stores/retrieves data on cloud databases. Following the Agile development cycle, we worked on defining requirements and concurrently working on the backend and UI design in our first sprint. After some preliminary gains, in our second sprint we worked to integrate the frontend to the back end.
+Home Climate is inspired by EC 463 (senior design course at Boston University) to practice working within a small team setting to develop an application that stores/retrieves data on cloud databases. Following the Agile development cycle, we worked on defining requirements and concurrently working on the backend and UI design in our first sprint. After some preliminary gains, in our second sprint we worked to integrate the frontend to the back end. This is a diagram detailing our thought process behind the design of HomeClimate:
+
+![design_diagram](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/block_diagram.JPG)
 
 The app features include user authentication through a Google sign-in, individualized data from simulated sensors that track humidity and temperature, and a plot of most recently recorded/fetched data. 
 
 ![homescreen](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/Screen%20Shot%202018-09-19%20at%205.48.01%20PM.png)
-                                             *homescreen of app*
+                                            
 
 ## Prerequisites
 * Skills
@@ -50,11 +52,21 @@ Spring two consisted of integrating the two moving parts, as well as using the d
 The app can be run in xCode on a Mac computer either on a simulated or a physical Apple device. This prototype was designed for an iPhone 8 Plus simulator.In order to run, one must download the entire “xCode Project” folder, open the .xcworkspace file in xCode and click the play button in the upper left hand corner of the application. A simulator will then begin to boot up.Using the Google Login SDK, our login process is fairly simple— one’s username and password is the same as their google account. If they are not within our database, though, they will be prompted to register for an account.The Google login returns a unique User ID code, which is stored in Apple’s Keychain, and then used as the User ID within our database as well.
 
 ![ui image](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/HomeClimate_UI.JPG) 
-                                         *UI design of HomeClimate*
+                                        
 
 Cloud Firebase Firestore was used as a service, and is queried within the application to check if the user is registered to our application, as well as if they have a registered house identification.
 
+![database image](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/database_breakdown.JPG)
+
 Later within the application, the chart button is pushed to get data and plot it with the Charts library.
+
+## Unit and Integration Testing
+
+For verification testing we had aimed to run two phases of testing. Since the work was divvied up between frontend and backend (UI design of iOS app and setup of database through Google Firestore) our first test was to integrate the iOS app and the databse. Our basic tests were to randomly generate data with a python script and update our database on Firestore, and then query that data from the app and display it on the interface.
+
+Our plans for unit testing were to authenticate user-login, and also test that new data is generated at request time from the user. This would simulate real-time sensor reading, but unfortunately we were not able to fully verify this feature and still under testing. 
+
+Another test we intended to carry out is the verification that multiple users can access the app in parallel. This would further verify the secure unique user-login. 
 
 ## Built With
 
