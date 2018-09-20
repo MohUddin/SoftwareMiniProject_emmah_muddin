@@ -11,12 +11,13 @@ The app features include user authentication through a Google sign-in, individua
 
 ## Installing
 
-```
-some code maybe
-```
+In order for one to see the source code, this application can be run by downloading the folder "xCode Project", and then opening the xcworkspace file. From there, one can run the application on a simulated or physical Apple device. This prototype was built for iPhone 8 Plus.
+
+This application can also be exported as an ipa file and deployed to the App Store in its final stages.
+
 ## Running the App 
 
-pictures of UI or graph? examples
+See Screenshots folder for pictures of the application in practice
 
 ## Built With
 
