@@ -9,8 +9,8 @@ The app features include user authentication through a Google sign-in, individua
 
 ## Prerequisites
 * Skills
-    ** practice agile SW development techniques
-    ** practice code management tools (GitHub)
+    * practice agile SW development techniques
+    * practice code management tools (GitHub)
     
 
 ## Installing
