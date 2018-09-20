@@ -21,7 +21,7 @@ The app features include user authentication through a Google sign-in, individua
 * Verification
    * define tests to ensure deliverable meets requirements
 
-### Application Requirements
+#### Application Requirements ####
 
 * app can be iOS, Android or Web
 * any cloud service provider
