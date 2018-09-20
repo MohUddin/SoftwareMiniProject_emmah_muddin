@@ -7,7 +7,7 @@ Home Climate is inspired by EC 463 (senior design course at Boston University) t
 
 The app features include user authentication through a Google sign-in, individualized data from simulated sensors that track humidity and temperature, and a plot of most recently recorded/fetched data. 
 
-![homescreen](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/Screen%20Shot%202018-09-19%20at%205.48.01%20PM.png)
+![homescreen](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/Screen%20Shot%202018-09-19%20at%205.48.01%20PM.png "Homescreen:")
 
 ## Prerequisites
 * Skills
