@@ -78,7 +78,7 @@ Another test we intended to carry out is the verification that multiple users ca
 
 ## Authors
 
-* **Emma Howard** - *Front End + UI + Integration* [profile](https://www.linkedin.com/in/emmabh/)
+* **Emma Howard** - *Front End UI + Integration* [profile](https://www.linkedin.com/in/emmabh/)
 * **Mohammed Uddin** - *Backend Database* [profile](https://www.linkedin.com/in/mouddin/)
 
 ## Licensing
