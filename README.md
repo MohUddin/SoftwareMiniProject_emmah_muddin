@@ -7,7 +7,8 @@ Home Climate is inspired by EC 463 (senior design course at Boston University) t
 
 The app features include user authentication through a Google sign-in, individualized data from simulated sensors that track humidity and temperature, and a plot of most recently recorded/fetched data. 
 
-![homescreen](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/Screen%20Shot%202018-09-19%20at%205.48.01%20PM.png "Homescreen:")
+![homescreen](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/Screen%20Shot%202018-09-19%20at%205.48.01%20PM.png)
+                                             *homescreen of app*
 
 ## Prerequisites
 * Skills
@@ -47,6 +48,9 @@ For this two week process, we were able to complete two sprints to create our iO
 Spring two consisted of integrating the two moving parts, as well as using the data to plot a sampled set.
 
 The app can be run in xCode on a Mac computer either on a simulated or a physical Apple device. This prototype was designed for an iPhone 8 Plus simulator.In order to run, one must download the entire “xCode Project” folder, open the .xcworkspace file in xCode and click the play button in the upper left hand corner of the application. A simulator will then begin to boot up.Using the Google Login SDK, our login process is fairly simple— one’s username and password is the same as their google account. If they are not within our database, though, they will be prompted to register for an account.The Google login returns a unique User ID code, which is stored in Apple’s Keychain, and then used as the User ID within our database as well.
+
+![ui image](https://github.com/MohUddin/SoftwareMiniProject_emmah_muddin/blob/master/Screenshots/HomeClimate_UI.JPG) 
+                                         *UI design of HomeClimate*
 
 Cloud Firebase Firestore was used as a service, and is queried within the application to check if the user is registered to our application, as well as if they have a registered house identification.
 
