@@ -11,6 +11,23 @@ The app features include user authentication through a Google sign-in, individua
 * Skills
     * practice agile SW development techniques
     * practice code management tools (GitHub)
+* Development
+   * practice cloud services
+   * practice basic service APIs (e.g. login)
+   * practice Database basic skills
+   * simulate service
+      * efficiency and productivity
+      * system design
+* Verification
+   * define tests to ensure deliverable meets requirements
+
+### Application Requirements
+
+* app can be iOS, Android or Web
+* any cloud service provider
+* any database service
+* secure login
+* plot sampled temperature and humidity from a sensor 
     
 
 ## Installing
@@ -25,13 +42,11 @@ See "Screenshots" folder for pictures of the application in practice
 
 ## Built With
 
-* [Python]
-* [Swift / iOS]
-* [Google Firestore]
+* [Python](https://www.python.org/)
+* [Swift / iOS](https://developer.apple.com/swift/)
+* [Google Firestore](https://firebase.google.com/docs/firestore/)
 
-## Contributing
 
-## Versioning
 
 ## Authors
 
