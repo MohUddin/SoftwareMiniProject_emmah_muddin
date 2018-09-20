@@ -36,9 +36,27 @@ In order for one to see the source code, this application can be run by download
 
 This application can also be exported as an ipa file and deployed to the App Store in its final stages.
 
-## Running the App 
+## Running the App
 
-See "Screenshots" folder for pictures of the application in practice
+See "Screenshots" folder for pictures of the application in practice.
+
+For this two week process, we were able to complete two sprints to create our iOS application.
+
+Sprint one consisted of building a basic app that displayed data and used Google login functionality, creating a random number generator, and configuring a database in the cloud.
+
+Spring two consisted of integrating the two moving parts, as well as using the data to plot a sampled set.
+
+The app can be run in xCode on a Mac computer either on a simulated or a physical Apple device. This prototype was designed for an iPhone 8 Plus simulator.
+
+In order to run, one must download the entire “xCode Project” folder, open the .xcworkspace file in xCode and click the play button in the upper left hand corner of the application. A simulator will then begin to boot up.
+
+Using the Google Login SDK, our login process is fairly simple— one’s username and password is the same as their google account. If they are not within our database, though, they will be prompted to register for an account.
+
+The Google login returns a unique User ID code, which is stored in Apple’s Keychain, and then used as the User ID within our database as well.
+
+Cloud Firebase Firestore was used as a service, and is queried within the application to check if the user is registered to our application, as well as if they have a registered house identification.
+
+Later within the application, the chart button is pushed to get data and plot it with the Charts library.
 
 ## Built With
 
