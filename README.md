@@ -47,7 +47,7 @@ See "Screenshots" folder for pictures of the application in practice.
 
 For this two week process, we were able to complete two sprints to create our iOS application.Sprint one consisted of building a basic app that displayed data and used Google login functionality, creating a random number generator, and configuring a database in the cloud.
 
-Spring two consisted of integrating the two moving parts, as well as using the data to plot a sampled set.
+Sprint two consisted of integrating the two moving parts, as well as using the data to plot a sampled set.
 
 The app can be run in xCode on a Mac computer either on a simulated or a physical Apple device. This prototype was designed for an iPhone 8 Plus simulator.In order to run, one must download the entire “xCode Project” folder, open the .xcworkspace file in xCode and click the play button in the upper left hand corner of the application. A simulator will then begin to boot up.Using the Google Login SDK, our login process is fairly simple— one’s username and password is the same as their google account. If they are not within our database, though, they will be prompted to register for an account.The Google login returns a unique User ID code, which is stored in Apple’s Keychain, and then used as the User ID within our database as well.
 
@@ -82,6 +82,8 @@ Another test we intended to carry out is the verification that multiple users ca
 * **Mohammed Uddin** - *Backend Database* [profile](https://www.linkedin.com/in/mouddin/)
 
 ## Licensing
+
+Licensing procedures through *Apple iOS* and *Google Firestore*
 
 ## Acknowledgements
 
